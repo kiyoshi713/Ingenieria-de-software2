@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //Caracteres regulares para el usuario y contrasenya
@@ -43,9 +43,75 @@ const Registro = () => {
         setUsuarioValido(resultado);
     }, [usuario])
 
+    const AsyncRegistrarse = async (evt) => {
+        evt.preventDefault();
+        console.log(usuario, contra, repetirC);
+        setCorrecto(true)
+    }
     return (
-        <div>
-
-        </div>
+        <section>
+            <h1>Registro de Usuario</h1>
+            <form>
+                <label htmlFor="usuario">
+                    Usuario:
+                    <span className={usuarioValido ? "valid" : "hide"}>
+                        <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
+                    </span>
+                    <span className={usuarioValido ? "hide" : "invalid"}>
+                        <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                    </span>
+                </label>
+                <input 
+                    type="text"
+                    id="usuario"
+                    ref={usuarioRef}
+                    autoComplete="off"
+                    onChange={(evt) => setUsuario(evt.target.value)}
+                    required
+                    aria-invalid={usuarioValido ? "false" : "true"}
+                    onFocus={() => setUsuarioFocus(true)}
+                    onBlur={() => setUsuarioFocus(false)}>
+                </input>
+                <label htmlFor="contra">
+                    Contraseña:
+                    <span className={contraValido ? "valid" : "hide"}>
+                        <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
+                    </span>
+                    <span className={contraValido ? "hide" : "invalid"}>
+                        <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                    </span>
+                </label>
+                <input 
+                    type="password"
+                    id="contra"
+                    onChange={(evt) => setContra(evt.target.value)}
+                    required
+                    aria-invalid={contraValido ? "false" : "true"}
+                    onFocus={() => setContraFocus(true)}
+                    onBlur={() => setContraFocus(false)}>
+                </input>
+                <label htmlFor="repetirC">
+                    Confirmar contraseña:
+                    <span className={repetirCValido && repetirC  ? "valid" : "hide"}>
+                        <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
+                    </span>
+                    <span className={repetirCValido || repetirC ? "hide" : "invalid"}>
+                        <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                    </span>
+                </label>
+                <input 
+                    type="password"
+                    id="repetirC"
+                    onChange={(evt) => setRepetirC(evt.target.value)}
+                    required
+                    aria-invalid={repetirCValido ? "false" : "true"}
+                    onFocus={() => setRepetirCFocus(true)}
+                    onBlur={() => setRepetirCFocus(false)}>
+                </input>
+                <button>disabled={!usuarioValido || !contraValido || !repetirCValido ? true : false}
+                Registrarse
+                </button>
+            </form>
+        </section>
     )
 }
