@@ -14,26 +14,18 @@ const Registro = () => {
     //Hooks usuario
     const [usuario, setUsuario] = useState('');
     const [usuarioValido, setUsuarioValido] = useState(false);
-    const [usuarioFocus, setUsuarioFocus] = useState(false);
 
     //Hooks constrasenya
     const [contra, setContra] = useState('');
     const [contraValido, setContraValido] = useState(false);
-    const [contraFocus, setContraFocus] = useState(false);
 
     //Hooks repetir contrasenya
     const [repetirC, setRepetirC] = useState('');
     const [repetirCValido, setRepetirCValido] = useState(false);
-    const [repetirCFocus, setRepetirCFocus] = useState(false);
 
     //Hooks comprobar errores
     const [msgError, setMsgError] = useState('');
     const [correcto, setCorrecto] = useState(false);
-
-    // Efecto para encontrar el campo donde se encuentra enfocado 
-    useEffect(() => {
-        useRef.current.focus();
-    }, [])
 
     // Prueba de nombre de usuario valido, en la consola
     useEffect(() => {
@@ -61,6 +53,7 @@ const Registro = () => {
                         <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                     </span>
                 </label>
+                <div></div>
                 <input 
                     type="text"
                     id="usuario"
@@ -68,10 +61,9 @@ const Registro = () => {
                     autoComplete="off"
                     onChange={(evt) => setUsuario(evt.target.value)}
                     required
-                    aria-invalid={usuarioValido ? "false" : "true"}
-                    onFocus={() => setUsuarioFocus(true)}
-                    onBlur={() => setUsuarioFocus(false)}>
+                    aria-invalid={usuarioValido ? "false" : "true"}>
                 </input>
+                <div></div>
                 <label htmlFor="contra">
                     Contraseña:
                     <span className={contraValido ? "valid" : "hide"}>
@@ -81,15 +73,15 @@ const Registro = () => {
                         <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                     </span>
                 </label>
+                <div></div>
                 <input 
                     type="password"
                     id="contra"
                     onChange={(evt) => setContra(evt.target.value)}
                     required
-                    aria-invalid={contraValido ? "false" : "true"}
-                    onFocus={() => setContraFocus(true)}
-                    onBlur={() => setContraFocus(false)}>
+                    aria-invalid={contraValido ? "false" : "true"}>
                 </input>
+                <div></div>
                 <label htmlFor="repetirC">
                     Confirmar contraseña:
                     <span className={repetirCValido && repetirC  ? "valid" : "hide"}>
@@ -99,19 +91,21 @@ const Registro = () => {
                         <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
                     </span>
                 </label>
+                <div></div>
                 <input 
                     type="password"
                     id="repetirC"
                     onChange={(evt) => setRepetirC(evt.target.value)}
                     required
-                    aria-invalid={repetirCValido ? "false" : "true"}
-                    onFocus={() => setRepetirCFocus(true)}
-                    onBlur={() => setRepetirCFocus(false)}>
+                    aria-invalid={repetirCValido ? "false" : "true"}>
                 </input>
-                <button>disabled={!usuarioValido || !contraValido || !repetirCValido ? true : false}
+                <div></div>
+                <button disabled={!usuarioValido || !contraValido || !repetirCValido ? true : false}>
                 Registrarse
                 </button>
             </form>
         </section>
     )
 }
+
+export default Registro
