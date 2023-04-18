@@ -1,0 +1,48 @@
+.login{
+    margin: 20px auto;
+    width: 300px;
+    text-align: center;
+  }
+
+h1, button,form{
+  color: black;
+}
+
+  .login-screen{
+    background-color: #97e874;
+    padding: 20px;
+    border-radius: 5px;
+  }
+    
+  .login-form {
+    text-align: center;
+  }
+  .control-group {
+    margin-bottom: 10px;
+  }
+    
+  input {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 250px;
+    transition: border .5s;
+  }
+    
+  .titulo{
+    text-align: left;
+    margin: 20px;
+    color:rgb(0, 0, 0);
+    background-color: white;
+  }
+ 
+  .password-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+}
