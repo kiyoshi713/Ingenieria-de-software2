@@ -1,0 +1,14 @@
+.formMenu{
+    width: 50%;
+
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+}
+
+.boton{
+    width: 100%;
+}
