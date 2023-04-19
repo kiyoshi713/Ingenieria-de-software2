@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 //Caracteres regulares para el usuario y contrasenya
 const usuario_regex = /^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
 const contra_regex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
@@ -42,8 +43,12 @@ const Registro = () => {
     }
     return (
         <section>
-            <h1>Registro de Usuario</h1>
-            <form>
+            <div className="register">
+            <div className="col-1">
+            <h2>Registrarse</h2>
+            </div>
+            </div>
+            <form className='flex flex-col'>
                 <label htmlFor="usuario">
                     Usuario:
                     <span className={usuarioValido ? "valid" : "hide"}>
@@ -100,7 +105,7 @@ const Registro = () => {
                     aria-invalid={repetirCValido ? "false" : "true"}>
                 </input>
                 <div></div>
-                <button disabled={!usuarioValido || !contraValido || !repetirCValido ? true : false}>
+                <button className="btn" disabled={!usuarioValido || !contraValido || !repetirCValido ? true : false}>
                 Registrarse
                 </button>
             </form>
