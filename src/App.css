@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.registro{
+  max-width: 978px;
+  width: 100vw;
+  display:flex;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+}
+.register .col-1{
+  margin: auto;
+  padding: 3em 0;
+}
+#form > .btn{
+  background-color: #003049;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.m-50 {
+  margin: 50px;
+}
+
+.busqueda {
+  padding: 10px;
+  font-size :20px;
+}
