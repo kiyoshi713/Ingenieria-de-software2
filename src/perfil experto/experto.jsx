@@ -1,9 +1,8 @@
+import React from 'react';
 const Expert = () => {
     return(
-        <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-e602"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1">
-          <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
-        </a>
+        <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-e602">
+          <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
@@ -57,14 +56,14 @@ const Expert = () => {
                     <div class="u-container-layout u-container-layout-3">
                       <h2 class="u-text u-text-grey-70 u-text-3">Publicacion</h2>
                       <div class="u-form u-form-1">
-                        <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px;" source="email" name="form">
+                        <form  class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px;" source="email" name="form">
                           <div class="u-form-group u-form-name u-label-none u-form-group-1">
                             <label for="name-6797" class="u-label">Name</label>
-                            <input type="text" placeholder="Titulo" id="name-6797" name="name" class="u-input u-input-rectangle" required="">
+                            <input type="text" placeholder="Titulo" id="name-6797" name="name" class="u-input u-input-rectangle" required=""/>
                           </div>
                           <div class="u-form-email u-form-group u-label-none u-form-group-2">
                             <label for="email-6797" class="u-label">Email</label>
-                            <input type="email" placeholder="descripcion" id="email-6797" name="email" class="u-input u-input-rectangle" required="">
+                            <input type="email" placeholder="descripcion" id="email-6797" name="email" class="u-input u-input-rectangle" required=""/>
                           </div>
                           <div class="u-form-group u-form-message u-label-none u-form-group-3">
                             <label for="message-6797" class="u-label">Address</label>
@@ -72,12 +71,12 @@ const Expert = () => {
                           </div>
                           <div class="u-align-left u-form-group u-form-submit u-form-group-4">
                             <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
-                            <input type="submit" value="submit" class="u-form-control-hidden">
+                            <input type="submit" value="submit" class="u-form-control-hidden"/>
                           </div>
                           <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
                           <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
-                          <input type="hidden" value="" name="recaptchaResponse">
-                          <input type="hidden" name="formServices" value="af6398c24afed42f80fca17e3bc7d9fb">
+                          <input type="hidden" value="" name="recaptchaResponse"/>
+                          <input type="hidden" name="formServices" value="af6398c24afed42f80fca17e3bc7d9fb"/>
                         </form>
                       </div>
                     </div>
