@@ -6,8 +6,8 @@ import Perfil from './perfil/perfil.jsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BusquedaPage from './BusquedaPage';
 
-import Experto from './perfil experto/experto';
-import Crear from './crear cuenta/crear';
+/*import Experto from './perfil experto/experto';
+import Crear from './crear cuenta/crear';*/
 
 import NuevoUsuarioP from './NuevoUsuarioPage';
 
@@ -21,8 +21,7 @@ root.render(
     <Route path= '/soft2/' element = {<Perfil/>} />
     <Route path= '/busqueda/' element = {<BusquedaPage/>} />
 
-    <Route path= '/experto/' element = {<Experto/>} />
-    <Route path= '/crear/' element = {<Crear/>} />
+    
 
     <Route path= '/NuevoUsuario/' element = {<NuevoUsuarioP/>} />
 
@@ -30,3 +29,5 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+/*<Route path= '/experto/' element = {<Experto/>} />
+    <Route path= '/crear/' element = {<Crear/>} />*/
