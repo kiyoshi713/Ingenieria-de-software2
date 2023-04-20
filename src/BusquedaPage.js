@@ -1,7 +1,7 @@
 import BarraBusqueda from './BarraBusqueda';
-function App() {
+function BusquedaPage() {
     return (
       <div className="App">
         <BarraBusqueda></BarraBusqueda>
         </div>)}
-export default BarraBusquedaPage;
+export default BusquedaPage;
